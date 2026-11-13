@@ -1,16 +1,61 @@
 {
   "walletAddress": "0xAeEB0bBeBfE22Fe328543F50702611CF0807A0AF",
   "walletType": "Trust Wallet",
-  "paymentMode": "pool_converted_payout",
+  "paymentMode": "verified_pool_pays_native_ETH_on_Ethereum_mainnet",
   "enabled": false,
   "note": "Payments remain disabled until address, chain, asset and pool are verified. No private keys required.",
   "candidatePayouts": [
-    {"chain": "Polygon", "chainId": 137, "asset": "USDC", "verified": false},
-    {"chain": "BNB Smart Chain", "chainId": 56, "asset": "BNB", "verified": false},
-    {"chain": "Ethereum", "chainId": 1, "asset": "ETH", "verified": false},
-    {"chain": "Base", "chainId": 8453, "asset": "ETH", "verified": false},
-    {"chain": "Arbitrum One", "chainId": 42161, "asset": "ETH", "verified": false},
-    {"chain": "Avalanche C-Chain", "chainId": 43114, "asset": "AVAX", "verified": false}
+    {
+      "chain": "Polygon",
+      "chainId": 137,
+      "asset": "USDC",
+      "verified": false
+    },
+    {
+      "chain": "BNB Smart Chain",
+      "chainId": 56,
+      "asset": "BNB",
+      "verified": false
+    },
+    {
+      "chain": "Ethereum",
+      "chainId": 1,
+      "asset": "ETH",
+      "verified": false
+    },
+    {
+      "chain": "Base",
+      "chainId": 8453,
+      "asset": "ETH",
+      "verified": false
+    },
+    {
+      "chain": "Arbitrum One",
+      "chainId": 42161,
+      "asset": "ETH",
+      "verified": false
+    },
+    {
+      "chain": "Avalanche C-Chain",
+      "chainId": 43114,
+      "asset": "AVAX",
+      "verified": false
+    }
   ],
-  "unsupportedDirectPayouts": ["XMR", "BTC", "VRSC", "RTM", "DERO"]
+  "unsupportedDirectPayouts": [
+    "XMR",
+    "BTC",
+    "VRSC",
+    "RTM",
+    "DERO"
+  ],
+  "selectionPolicy": {
+    "mode": "all_supported_algorithms_dynamic",
+    "mineConcurrently": false,
+    "autoSwitch": true,
+    "requiresExplicitDeviceConsent": true,
+    "requiresVerifiedPoolEthMainnetPayout": true,
+    "excludeUnsupportedOrUnprofitable": true,
+    "implementationStatus": "pending_native_miners_and_pool_integration"
+  }
 }
